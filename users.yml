@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  vars:
+    users_dir_ssh_keys: ./files/ssh_authorized_keys
+    users_available:
+      kostyrev:
+        name: "Aleksandr Kostyrev"
+        uid: "20001"
+        is_admin: yes
+      chugalinskiy:
+        name: "Konstantin Chugalinskiy"
+        uid: "20002"
+        is_admin: yes
+    users:
+      - username: kostyrev
+      - username: chugalinskiy
+  roles:
+    - hudecof.users

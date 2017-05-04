@@ -1,0 +1,5 @@
+- src: https://github.com/hudecof/ansible_users
+  name: hudecof.users
+
+- src: https://github.com/jtyr/ansible-sudo.git
+  name: jtyr.sudo

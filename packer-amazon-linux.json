@@ -1,0 +1,37 @@
+{
+  "variables": {
+    "ami_name": "amazon-linux-reference",
+    "region": "{{env `AWS_REGION`}}"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "{{user `region`}}",
+      "instance_type": "c4.large",
+      "source_ami_filter": {
+          "filters": {
+            "virtualization-type": "hvm",
+            "name": "amzn-ami-hvm-*-x86_64-gp2",
+            "root-device-type": "ebs"
+          },
+          "owners": ["amazon"],
+          "most_recent": true
+      },
+      "ssh_username": "ec2-user",
+      "ssh_private_ip": false,
+      "ssh_pty": true,
+      "force_deregister": true,
+      "force_delete_snapshot": true,
+      "associate_public_ip_address": true,
+      "ami_name": "{{user `ami_name`}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "playbook.yml",
+      "ansible_env_vars": [
+        "ANSIBLE_FORCE_COLOR=True" ]
+    }
+  ]
+}

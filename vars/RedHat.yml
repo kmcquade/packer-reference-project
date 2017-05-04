@@ -1,0 +1,6 @@
+sudo_users__custom:
+  - '%wheel':
+      host: ALL
+      runas: ALL
+      tag: 'NOPASSWD'
+      cmd: ALL

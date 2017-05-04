@@ -1,0 +1,6 @@
+sudo_users__custom:
+  - '%sudo':
+      host: ALL
+      runas: ALL
+      tag: 'NOPASSWD'
+      cmd: ALL
