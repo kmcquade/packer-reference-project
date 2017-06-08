@@ -7,9 +7,7 @@ The content of this repository is provided for educational purposes only.
 `sudo dnf install -y --enablerepo updates-testing ansible`
 
 #### Ubuntu
-`sudo apt-get install python-pip python-dev -y`  
-`sudo pip install markupsafe`  
-`sudo pip install ansible==2.3.0.0`
+Follow [instructions](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu) on ansible site.
 
 ### Install [pre-commit](http://pre-commit.com), [ansible-lint](https://github.com/willthames/ansible-lint) and Ansible roles
 `make`
