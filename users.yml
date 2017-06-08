@@ -10,7 +10,7 @@
         is_admin: yes
       chugalinskiy:
         name: "Konstantin Chugalinskiy"
-        uid: "20002"
+        uid: "30000"
         is_admin: yes
     users:
       - username: kostyrev
